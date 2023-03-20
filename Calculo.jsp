@@ -3,11 +3,11 @@
 <%@ page import="java.text.DecimalFormat" %>
 <html>
     <head>
-        <title>Convers„o</title>
+        <title>Convers√£o</title>
         <link rel="stylesheet" type="text/css" href="Calculo.css">
     </head>
     <body>
-        <h1>Resultado de Convers„o</h1><br>
+        <h1>Resultado de Convers√£o</h1><br>
        <%   double valor = Double.parseDouble(request.getParameter("valor"));
             double real = 0.18;
             double dolar = 5.26;
@@ -17,25 +17,25 @@
             String real1 = request.getParameter("real1");
             String dolar1 = request.getParameter("dolar1");
 
-            total1 = valor * dolar;
-            total2 = valor / real;
+            total1 = valor / dolar;
+            total2 = valor * dolar;
                     
             if (de.equals("real1") && para.equals("dolar1"))
             {
-            out.println("<strong>CotaÁ„o do Dolar: US$<strong>"+dolar+"<br>");
+            out.println("<strong>Cota√ß√£o do Dolar: US$<strong>"+dolar+"<br>");
             out.println("<br>");
-            out.println("<strong>Convers„o: US$<strong>" + total1);
+            out.println("<strong>Convers√£o: US$<strong>" + total1);
             }
             else if (de.equals("dolar1") && para.equals("real1")) 
             {                
-                out.println("<strong>CotaÁ„o do Real: R$</strong>"+real+"<br>");
+                out.println("<strong>Cota√ß√£o do Real: R$</strong>"+real+"<br>");
                 out.println("<br>");
-                out.println("<strong>Convers„o: R$</strong>" + total2);
+                out.println("<strong>Convers√£o: R$</strong>" + total2);
             }
             else
             {
-                out.println("<strong>A opÁ„o escolhida n„o est· disponÌvel.</strong><br>");
-                out.println("<strong>Volte e escolha uma opÁ„o disponÌvel para ser convertida.</strong>");
+                out.println("<strong>A op√ß√£o escolhida n√£o est√° dispon√≠vel.</strong><br>");
+                out.println("<strong>Volte e escolha uma op√ß√£o dispon√≠vel para ser convertida.</strong>");
             }
         %>
         <br>
